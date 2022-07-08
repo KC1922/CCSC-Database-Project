@@ -1,0 +1,105 @@
+.footer {
+  background-color: white;
+  box-shadow: 0px -2px 2px rgba(0, 0, 0, .25);
+  color: rgb(80, 80, 80);
+}
+
+.footer a {
+  text-decoration: none;
+  color:rgb(80, 80, 80);
+}
+
+.footer a:hover {
+  color:rgb(233, 113, 28);
+}
+
+.row1-1 {
+  display: flex;
+  padding: 0px 60px;
+  padding-top: 40px;
+}
+
+.row1-1 div {
+  margin-right: 40px;
+  margin-bottom: 16px;
+}
+
+.column1-1 {
+  padding: 60px 0px;
+}
+
+.ccsc-quick-links,
+.ccsc-rankings,
+.about-ccsc {
+  font-size: 24px;
+}
+
+.submit-a-paper-button {
+  background-color: white;
+  color: rgb(7, 57, 115);
+  border: 2px solid rgb(7, 57, 115);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color .15s border-color .15s;
+}
+
+.submit-a-paper-button:hover {
+  color: rgb(233, 113, 28);
+  border-color: rgb(233, 113, 28);
+  background-color: white;
+}
+
+.row1-2 {
+  border-bottom: 2px solid rgb(7, 57, 115);
+  margin: 0px 60px;
+  display: flex;
+  justify-content: right;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.row1-2 img {
+  width: 16px;
+  padding: 0px 10px;
+}
+
+.row1-3 {
+  margin: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.elsevier {
+  width: 160px;
+}
+
+.footer-copyright-column {
+  margin-right: 200px;
+}
+
+.footer .cookie-settings {
+  color: blue;
+}
+
+.footer .cookie-settings:hover {
+  color: blue;
+}
+
+.lightning {
+  width: 20px;
+}
+
+.footer-row2-1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.privacy-policy-div {
+  margin-right: 100px;
+}
+
+.we-use-cookies-div {
+  margin-bottom: 10px;
+}

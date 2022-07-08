@@ -1,0 +1,48 @@
+.submission-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: white;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightgrey;
+  padding: 5px;
+}
+
+.abstract-preview {
+  background-color: rgb(222, 228, 255);
+  width: 790px;
+  border: 1px solid grey;
+}
+
+.title-div,
+.authors-container,
+.affiliations,
+.date-written,
+.references,
+.abstract,
+.submit-div {
+  background-color: rgb(255, 239, 187);
+  margin-bottom: 6px;
+  padding: 10px;
+}
+
+
+.textarea { /* https://stackoverflow.com/questions/11010491/how-will-i-align-the-label-of-a-text-area-to-top */
+  vertical-align: top;
+}
+
+.authors {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.selected-authors-container {
+  background-color: rgb(255, 247, 221);
+  padding: 10px;
+}
+
+.coauthor-div {
+  display: flex;
+}

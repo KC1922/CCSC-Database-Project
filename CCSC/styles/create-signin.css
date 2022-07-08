@@ -1,0 +1,87 @@
+.create-signin-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 200px;
+}
+
+.signin-container {
+  margin-right: 20px;
+  background-color: white;
+  padding: 20px 0px;
+}
+
+.signin-container div,
+.create-container div {
+  margin-bottom: 10px;
+}
+
+.signin-div {
+  border-left: 2px solid rgb(7, 57, 115);
+  padding-left: 40px;
+  width: 200px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.email-address-div,
+.password-div,
+.remember-forgot-div,
+.signin-div-button {
+  padding: 0px 40px;
+}
+
+.email-address,
+.password {
+  width: 390px;
+  height: 40px;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.remember-forgot-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forgot-password,
+.privacy-policy {
+  text-decoration: none;
+  color: blue;
+}
+
+.forgot-password:hover
+.privacy-policy:hover {
+  color: rgb(233, 113, 28);
+}
+
+.signin-button,
+.join-button {
+  background-color: rgb(7, 57, 115);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color .15s;
+}
+
+.signin-button:hover,
+.join-button:hover {
+  background-color: rgb(233, 113, 28);
+}
+
+.create-container .email-address-div .email-address {
+  margin-bottom: 10px;
+}
+
+.create-div,
+.membership-div,
+.share-and-revise-div,
+.privacy-policy {
+  padding: 0px 40px;
+}
+
+.create-div {
+  font-size: 24px;
+  font-weight: bold;
+}
