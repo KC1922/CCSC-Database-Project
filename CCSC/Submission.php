@@ -20,11 +20,11 @@
       include_once("header.php");
     ?>
     
-    <form action="includes/submission-inc.php" method="POST">
+    <form action="includes/submission-inc.php" method="POST" enctype="multipart/form-data">
       <div class="submission-container">
         <div class="abstract-preview">
           <div class="upload">
-            <input type="file" name="filename">
+            <input type="file" name="pdf_data">
           </div>
           
           <div class="title-div">
@@ -66,26 +66,23 @@
 
             <div class="coauthor-container">
               <div>
-                Add a New Co-Author:
+                Add a New Author:
               </div>
 
-              <div class="coauthor-div">
-                <div>
-                  <label for="name-id">Name:</label>
-                  <input type="text" id="name-id">
+              <form action="includes/authors-inc.php"></form>
+                <div class="coauthor-div">
+                  <div>
+                    <label for="email-id">Email:</label>
+                    <input type="text" id="email-id">
+                  </div>
+      
+                  <div>
+                    <button name="add-author">
+                      Add
+                    </button>
+                  </div>
                 </div>
-    
-                <div>
-                  <label for="email-id">Email:</label>
-                  <input type="text" id="email-id">
-                </div>
-    
-                <div>
-                  <button>
-                    Add
-                  </button>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
 
@@ -101,26 +98,10 @@
 
             <div>
               Is this a working paper or an accepted paper? <br>
-                <input type="radio" id="wps" name="Q1" value="WPS">
+                <input type="radio" id="wps" name="series" value="Working Paper Series">
                 <label for="wps">WPS</label><br>
-                <input type="radio" id="aps" name="Q1" value="APS">
+                <input type="radio" id="aps" name="series" value="Accepted Paper Series">
                 <label for="aps">APS</label><br>
-            </div>
-
-            <div>
-              Has this paper appeared, or been selected to appear, in a Paper Series, Journal, or Book? <br>
-                <input type="radio" id="yes" name="Q2" value="yes">
-                <label for="yes">Yes</label><br>
-                <input type="radio" id="no" name="Q2" value="No">
-                <label for="no">No</label><br>
-            </div>
-
-            <div>
-              Is this paper a health science case report? <br>
-                <input type="radio" id="yes" name="Q3" value="yes">
-                <label for="yes">Yes</label><br>
-                <input type="radio" id="no" name="Q3" value="No">
-                <label for="no">No</label><br>
             </div>
           </div>
 
@@ -129,9 +110,9 @@
               <label for="abstract-body">Abstract Body: </label>
               <textarea class="textarea" name="abstract"cols="30" rows="1" placeholder="[enter Abstract Body]"></textarea> <br>
               <label for="title">Keywords: </label>
-              <input type="text" placeholder="[comma separated]"> <br>
+              <!-- <input type="text" placeholder="[comma separated]"> <br>
               <label for="title">JEL Codes: </label>
-              <input type="text" placeholder="[comma separated]"> <br>
+              <input type="text" placeholder="[comma separated]"> <br> -->
               <label for="topic-id">Topic: </label> <br>
               <input type="checkbox" id="analysis-of-algorithms-id">
               <label for="analysis-of-algorithms-id">Analysis of Algorithms</label>
@@ -199,8 +180,8 @@
               <label for="using-technology-in-the-classroom-id">Using Technology in the Classroom</label>
               <input type="checkbox" id="web-and-internet-programming-id">
               <label for="web-and-internet-programming-id">Web and Internet Programming</label>
-              <input type="checkbox" id="other-id">
-              <label for="other-id">Other (Desribe)</label>
+              <!-- <input type="checkbox" id="other-id">
+              <label for="other-id">Other (Desribe)</label> -->
           </div>
 
           <div class="submit-div">

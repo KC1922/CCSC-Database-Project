@@ -24,6 +24,18 @@
       </a>
     </div>
 
+    <div class="browse">
+      <a href="Delete-Modify.php">
+        Delete/Modify
+      </a>
+    </div>
+
+    <div class="browse">
+      <a href="All-Papers.php">
+        All Papers
+      </a>
+    </div>
+
     <?php
       if (isset($_SESSION["id"])) {
         echo '

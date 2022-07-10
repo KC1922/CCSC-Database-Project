@@ -138,3 +138,44 @@
       header("Location: ../Create-SignIn.php");
     }
   }
+
+  function uploadFile($pdf_data) {
+    // $fileName = $_FILES['pdf_data']['name'];
+    $fileName = $pdf_data['name'];
+    $fileTmpName = $pdf_data['tmp_name'];
+    $fileSize = $pdf_data['size'];
+    $fileError = $pdf_data['error'];
+    $fileType = $pdf_data['type'];
+
+    $fileExt = explode('.', $fileName);
+    $fileActualExt = strtolower(end($fileExt));
+
+    $allowed = array('pdf');
+
+    if (in_array($fileActualExt, $allowed)) {
+      if ($fileError === 0) {
+        if ($fileSize < 10000000) {
+          $fileNameNew = uniqid('', true).".".$fileActualExt;
+
+          $fileDestination = '../uploads/'.$fileNameNew;
+          move_uploaded_file($fileTmpName, $fileDestination);
+
+          return $fileNameNew;
+        }
+
+        else {
+          echo "File is too big.";
+        }
+      }
+
+      else {
+        echo "There was an error uploading you file.";
+      }
+    }
+
+    else {
+      echo "pdf's only.";
+    }
+
+    return "test";
+  }
