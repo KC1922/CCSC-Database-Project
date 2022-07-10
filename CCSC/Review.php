@@ -14,7 +14,7 @@
 
   <body>
     <?php
-      include("header.php");
+      include_once("header.php");
     ?>
 
     <div class="submission-container">
@@ -278,7 +278,7 @@
     </div>
 
     <?php
-      include("footer.php");
+      include_once("footer.php");
     ?>
   </body>
 </html>

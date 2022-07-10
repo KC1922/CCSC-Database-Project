@@ -1,7 +1,3 @@
-<?php
-  include_once 'includes/dbh-inc.php';
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,20 +13,7 @@
 
   <body>
     <?php
-      $sql = "SELECT * FROM `user`;";
-      $result = mysqli_query($conn, $sql);
-
-      // $resultCheck = mysqli_num_rows($result);
-
-      // if ($resultCheck > 0) {
-      //   while ($row = mysqli_fetch_assoc($result)) {
-      //     echo $row['fname'];
-      //   }
-      // }
-    ?>
-
-    <?php
-      include("header.php");
+      include_once("header.php");
     ?>
 
     <div class="abstract-search-container">
@@ -85,9 +68,11 @@
               </div>
     
               <div>
-                <button class="search-button">
-                  Search
-                </button>
+                <form action="Papers.php">
+                  <button class="search-button">
+                    Search
+                  </button>
+                </form>
               </div>
             </div>
 
@@ -118,7 +103,7 @@
                 </div>
     
                 <div class="all-ccsc-networks">
-                  All CCSC Networks
+                  All CCSC Topics
                 </div>
     
                 <div>
@@ -196,7 +181,7 @@
     </div>
 
     <?php
-      include("footer.php");
+      include_once("footer.php");
     ?>
   </body>
 </html>

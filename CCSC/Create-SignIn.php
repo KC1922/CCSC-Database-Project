@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/create-signin.css">
   <body>
     <?php
-      include("header.php");
+      include_once("header.php");
     ?>
 
     <div class="create-signin-container">
@@ -21,11 +21,25 @@
         </div>
 
         <div class="email-address-div">
-          <input class="email-address" type="text" name="email" placeholder="Email Address">
+          <form action="includes/login-inc.php" method="POST">
+            <input class="email-address" type="text" name="email" placeholder="Email Address">
+            <input class="password" type="password" name="password" placeholder="Password">
+            <button class="signin-button" type="submit" name="submit">Sign in</button>
+          </form>
         </div>
 
-        <div class="password-div">
-          <input class="password" type="text" name="pwd" placeholder="Password">
+        <div>
+          <?php
+            if (isset($_GET["error"])) {
+              if ($_GET["error"] == "wronglogin") {
+                echo "<p>Incorrect login information.</p>";
+              }
+            }
+
+            if (isset($_SESSION["email"])) {
+              echo "<p>Signed in as " . $_SESSION["email"] . "</p>";
+            }
+          ?>
         </div>
 
         <div class="remember-forgot-div">
@@ -37,12 +51,6 @@
           <div class="forgot-password-div">
             <a class="forgot-password" href="">Forgot password?</a>
           </div>
-        </div>
-
-        <div class="signin-div-button">
-          <button class="signin-button">
-            Sign in
-          </button>
         </div>
       </div>
 
@@ -62,19 +70,53 @@
         <div class="email-address-div">
           <form action="includes/signup-inc.php" method="POST">
             <input class="email-address" type="text" name="fname" placeholder="First Name">
+            <input class="email-address" type="text" name="minitial" placeholder="Middle Initial (Optional)">
             <input class="email-address" type="text" name="lname" placeholder="Last Name">
             <input class="email-address" type="text" name="email" placeholder="Email Address">
-            <input class="email-address" type="text" name="password" placeholder="Password">
+            <input class="email-address" type="password" name="password" placeholder="Password">
+            <input class="email-address" type="password" name="password-repeat" placeholder="Password">
+            <input class="email-address" type="text" name="phone" placeholder="Phone Number (Optional)">
+            <input class="email-address" type="url" name="website" placeholder="Website (Optional)">
             <button class="join-button" type="submit" name="submit">
               Join CCSC
             </button>
           </form>
         </div>
-  
-        <div class="join-div">
-          
+
+        <div>
+          <?php
+            if (isset($_GET["error"])) {
+              if ($_GET["error"] == "emptyinput") {
+                echo "<p>Fill in all necessary fields.</p>";
+              }
+
+              else if ($_GET["error"] == "invalidname") {
+                echo "<p>Name must be only letters and middle inital must be capital.</p>";
+              }
+
+              else if ($_GET["error"] == "invalidemail") {
+                echo "<p>Invalid email.</p>";
+              }
+
+              else if ($_GET["error"] == "passwordsdontmatch") {
+                echo "<p>Passwords must match.</p>";
+              }
+
+              else if ($_GET["error"] == "emailtaken") {
+                echo "<p>That email is already in the database.</p>";
+              }
+
+              else if ($_GET["error"] == "stmtfailed") {
+                echo "<p>Statement failed. You shouldn't see this.</p>";
+              }
+
+              else if ($_GET["error"] == "none") {
+                echo "<p>You have signed up.</p>";
+              }
+            }
+          ?>
         </div>
-  
+        
         <div>
           <a class="privacy-policy" href="">Privacy Policy</a>
         </div>
@@ -82,7 +124,7 @@
     </div>
 
     <?php
-      include("footer.php");
+      include_once("footer.php");
     ?>
   </body>
 </html>
